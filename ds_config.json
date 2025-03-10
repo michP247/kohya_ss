@@ -1,0 +1,31 @@
+{
+
+    "train_micro_batch_size_per_gpu": "auto",
+    "gradient_accumulation_steps": "auto",
+    "bf16": {
+        "enabled": true
+    }
+
+    ,
+    "zero_optimization": {
+
+        "stage": "auto",
+        "offload_optimizer": {
+            "device": "cpu",
+                "pin_memory": false
+        }
+
+        ,
+        "offload_param": {
+            "device": "cpu",
+                "pin_memory": false
+        }
+    }
+
+    ,
+    "autotuning": {
+        "enabled": true,
+            "overwrite": false,
+            "fast": false
+    }
+}
